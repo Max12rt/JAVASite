@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  h2 {
+    text-align: center;
+  }
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+  }
+  select, input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #45a049;
+  }
+</style>
+<head>
+  <meta charset="UTF-8">
+  <title>Alcohol Drink Selector</title>
+</head>
+<body>
+<h2>Find Your Perfect Alcoholic Drink</h2>
+
+<form method="post" action="/chat" th:object="${alcoholPreference}">
+
+  <label for="taste">Preferred Flavor:</label>
+  <select id="taste" name="taste">
+    <option value="sweet">Sweet</option>
+    <option value="bitter">Bitter</option>
+    <option value="sour">Sour</option>
+    <option value="fruity">Fruity</option>
+    <option value="spicy">Spicy</option>
+    <option value="herbal">Herbal</option>
+  </select>
+
+  <label for="strength">Drink Strength:</label>
+  <select id="strength" name="strength">
+    <option value="light">Light (to 5%)</option>
+    <option value="medium">Medium (from 5% to 15%)</option>
+    <option value="strong">Strong (from 15%+)</option>
+  </select>
+
+  <label for="base">Preferred Alcohol Type:</label>
+  <select id="base" name="base">
+    <option value="vodka">Vodka</option>
+    <option value="rum">Rum</option>
+    <option value="whiskey">Whiskey</option>
+    <option value="gin">Gin</option>
+    <option value="tequila">Tequila</option>
+    <option value="wine">Wine</option>
+    <option value="beer">Beer</option>
+    <option value="surprise">Surprise me</option>
+  </select>
+
+  <label for="temperature">Temperature:</label>
+  <select id="temperature" name="temperature">
+    <option value="cold">Cold</option>
+    <option value="room">Room Temperature</option>
+    <option value="hot">Hot</option>
+  </select>
+
+  <label for="serving">Serving Style:</label>
+  <select id="serving" name="serving">
+    <option value="neat">Straight / Neat</option>
+    <option value="rocks">On the Rocks</option>
+    <option value="cocktail">Mixed / Cocktail</option>
+    <option value="soda">With Soda / Juice</option>
+  </select>
+
+  <label for="diet">Dietary Restrictions:</label>
+  <select id="diet" name="diet">
+    <option value="none">No Restrictions</option>
+    <option value="low_sugar">Low Sugar</option>
+    <option value="gluten_free">Gluten-Free</option>
+    <option value="vegan">Vegan</option>
+  </select>
+
+  <label for="occasion">Occasion / Mood:</label>
+  <select id="occasion" name="occasion">
+    <option value="party">Party / Fun</option>
+    <option value="chill">Chill Night In</option>
+    <option value="romantic">Romantic Evening</option>
+    <option value="celebration">Celebration</option>
+    <option value="new">Trying Something New</option>
+  </select>
+
+  <!-- Вік користувача -->
+  <label for="age">Age</label>
+  <input type="number" id="age" name="age" min="0" max="120" required>
+
+  <!-- Стать користувача -->
+  <label for="sex">Sex</label>
+  <select id="sex" name="sex" required>
+    <option value="" disabled selected>-- Choose --</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+
+  <label for="ingredients">ADDS</label>
+  <textarea id="ingredients" name="ingredients" rows="4"></textarea>
+
+  <button type="submit">Suggest a Drink</button>
+  <a href="/index">← home</a>
+</form>
+<footer>
+  <p>© 2024 Wine & Spirits Finder</p>
+</footer>
+<div id="loading-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(255,255,255,0.8); z-index:9999; text-align:center;">
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; font-weight: bold; color: #1c0e13">
+    ⏳ Підбираємо рецепт для вас...
+  </div>
+</div>
+
+<script>
+  document.querySelector('form').addEventListener('submit', function() {
+    document.getElementById('loading-overlay').style.display = 'block';
+  });
+</script>
+</body>
+</html>

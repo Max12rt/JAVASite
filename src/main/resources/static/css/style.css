@@ -1,0 +1,114 @@
+/* /css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Cinzel:wght@600&display=swap');
+
+:root {
+    --main-bg: #1c0e13;
+    --accent: #b67a5d;
+    --text: #fff;
+    --button-bg: #b67a5d;
+    --button-hover: #d8a57e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: var(--main-bg);
+    color: var(--text);
+    background-image: url('/images/bar-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.page-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--accent);
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(28, 14, 19, 0.8);
+    color: var(--accent);
+    font-family: 'Cinzel', serif;
+}
+footer {
+    background-color: #1c0e13;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(28, 14, 19, 0.9);
+}
+
+nav a, nav form button {
+    color: var(--text);
+    background: var(--button-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    transition: background 0.3s;
+}
+
+nav a:hover, nav form button:hover {
+    background: var(--button-hover);
+}
+
+main, section {
+    flex: 1;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 15px;
+}
+
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+button {
+    background: var(--button-bg);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    color: var(--text);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: var(--button-hover);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: none;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Drink Recommendation Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        .recommendation-box {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="recommendation-box">
+    <h2>AI Recommendation</h2>
+    <p th:text="${recommendationText}">Here will be the recommended drink based on your preferences.</p>
+</div>
+
+<div class="recommendation-box" th:if="${#lists.isEmpty(wines)}">
+    <p>Unfortunately, we couldn't find a matching wine in our database. Try different preferences or check out the suggestion above!</p>
+</div>
+
+<div class="recommendation-box" th:if="${!#lists.isEmpty(wines)}">
+    <h3>Matching Wines:</h3>
+    <ul>
+        <li th:each="wine : ${wines}">
+            <h4 th:text="${wine.name}">Wine Name</h4>
+            <p><strong>Description:</strong> <span th:text="${wine.description}">Description</span></p>
+            <p><strong>Price:</strong> $<span th:text="${wine.price}">0.00</span></p>
+        </li>
+    </ul>
+</div>
+
+<a href="/winePreferencesFormBuy">← Back to preferences</a>
+<footer>
+    <p>© 2024 Wine & Spirits Finder</p>
+</footer>
+</body>
+</html>

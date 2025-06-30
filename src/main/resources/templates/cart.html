@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+</head>
+<body>
+<header>
+  <h1>Your Shopping Cart</h1>
+</header>
+<main>
+  <ul>
+    <li th:each="wine : ${cart}">
+      <p>Name: <span th:text="${wine.name}"></span></p>
+      <p>Price: $<span th:text="${wine.price}"></span></p>
+    </li>
+  </ul>
+  <form action="/checkout" method="post">
+    <button type="submit">Proceed to Checkout</button>
+  </form>
+</main>
+<footer>
+  <p>Footer Content &copy; 2024</p>
+</footer>
+</body>
+</html>
