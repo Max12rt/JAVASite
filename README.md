@@ -1,52 +1,26 @@
 This project implements a client-server architecture for a wine-selling website, using artificial intelligence to assist in wine selection. The selection is based on either an LLM (Large Language Model) or an arbiter algorithm to provide the best possible recommendation.
-В ПЗ були реалізовані сторінки з наступним графічним інтерфейсом
-користувача, а саме
+In the software, pages with the following graphical user interface (GUI) were implemented, namely:
 <img width="794" alt="Screenshot 2025-07-01 at 11 57 39" src="https://github.com/user-attachments/assets/52329a65-7b0e-4cd0-a711-d1cc935e7408" />
-Рисунок 4.1 – Приклад сторінки автентефікації
-На рисунку 4.1 представлена сторінка з реєстрацією (Login), на якій є 2
-поля для заповнення. Далі користувач зможе зайти на сайт, натиснувши
-кнопку Log in, або іншу кнопку – Registration, яка переадресовує користувача
-на сторінку з реєстрацією (Singup)
+Figure 4.1 – Example of the authentication page
+Figure 4.1 presents the login page, which contains two input fields. The user can log in by clicking the "Log in" button, or click the "Registration" button, which redirects the user to the signup page.
 <img width="783" alt="Screenshot 2025-07-01 at 11 57 45" src="https://github.com/user-attachments/assets/b4d263b2-3acd-4447-ad1f-7538ead9cd8f" />
-Рисунок 4.2 – Приклад сторінки реєстрації
-На цьому рисунку 4.2 є чотири поля для заповнення, ім’я або Nickname
-користувача, пошта та пароль і його підтвердження. Після заповнення всіх
-частин, користувач може створити свій профіль і зайти на головну сторінку.
+Figure 4.2 – Example of the registration page
+In Figure 4.2, there are four fields to fill in: the user's name or nickname, email, password, and password confirmation. After completing all fields, the user can create a profile and access the main page.
 <img width="740" alt="Screenshot 2025-07-01 at 11 57 54" src="https://github.com/user-attachments/assets/d6f463cf-97fa-42d5-967f-9b8aa0ead19c" />
-Рисунок 4.3 – Приклад основної сторінки
-З головної сторінки яка представлена на рисунку 4.3 можна перейти на
-сторінку вибору алкогольних напоїв, які були отримані зі стороннього сайту,
-далі їх придбати. Можна також перейти на форму і після її заповнення
-отримати рецепт приготування коктейлю, або заповнити форму і отримати
-запропонований АІ алкогольний напій з подальшою можливістю його
-замовити.
+Figure 4.3 – Example of the main page
+From the main page shown in Figure 4.3, users can navigate to a page with a selection of alcoholic beverages sourced from a third-party website, and then proceed to purchase them. Additionally, users can fill out a form to receive a cocktail recipe or submit preferences and receive an AI-generated drink suggestion, with an option to order it.
 <img width="800" alt="Screenshot 2025-07-01 at 11 58 04" src="https://github.com/user-attachments/assets/15ed5037-aead-48bd-96f9-f27d59c0adc3" />
-Рисунок 4.4 – Приклад сторінки магазину
-Сторінка на рисунку 4.4 Shop дає змогу знайти напій з запропонованої
-бази, яка була зібрана за допомогою безкоштовних баз напоїв. також можна
-далі перейти за посиланням на сайті замовити напій.
+Figure 4.4 – Example of the shop page
+The shop page shown in Figure 4.4 allows users to find drinks from a curated database, compiled using free drink databases. Users can also follow a provided link to order a selected beverage.
 <img width="757" alt="Screenshot 2025-07-01 at 11 58 12" src="https://github.com/user-attachments/assets/6045f229-821c-44fb-a47f-ad3c5d751d85" />
-
-Рисунок 4.5 – Приклад форми для знаходження напою
-Наступна сторінка 4.5 – це WinePreferenceForm, за допомогою цієї
-форми можна отримати напій від ШІ. На самій формі є різні поля для
-характеристики алкоголю за різними критеріями, а також поле для тексту з
-додатковими побажаннями, заборонами, тощо.
+Figure 4.5 – Example of the drink selection form
+Figure 4.5 presents the WinePreferenceForm, which enables the user to receive a drink recommendation from the AI. The form contains several fields for describing alcohol characteristics using various criteria, along with a text field for additional preferences, restrictions, etc.
 <img width="760" alt="Screenshot 2025-07-01 at 11 58 18" src="https://github.com/user-attachments/assets/a065f260-1a26-4859-aedc-ff31718f5cab" />
+Figure 4.6 – Example of a recommended drink
+Users are then able to follow a generated link to a third-party website to purchase the recommended drink. Alternatively, by clicking another button, the user can restart the process and attempt to find a different recommendation.
 
-Рисунок 4.6 – Приклад знайденого напою
-Далі є можливість перейти на згенероване посилання на сторонній сайт
-і купити знайдений напій, або за допомогою іншої кнопки, запустити весь
-процес спочатку і спробувати знайти інший.
-Для роботи ПЗ потрібно, щоб було місце для працюючого серверу
-Tomcat, який запускається системою Spring. Для цього потрібен ПК. або
-якщо це великий проект, то спеціальний сервер. На даний момент сервер
-починає працювати на локальному ПК підключеному до мережі інтернет.
-Також потрібне місце, щоб працював сервер mongo, на якому зосереджена
-база даних. Сервер та база даних мають бути з доступом до інтернету, щоб
-комунікувати між собою та користувачем.
-Для роботи ПЗ потрібен лише доступ до інтернету та браузер, далі
-потрібно зайти, зареєструватися або автентифікуватися і користуватися
-сайтом. Основний функціонал – це перейти на форму, заповнити її, почекати
-від 2 до 5 секунд і отримати бажаний напій від ШІ, далі його можна замовити
-на сайті за посиланням, яке буде надане, або спробувати знайти інший.
+For the software to function properly, a running Tomcat server launched by the Spring framework is required. This can be done on a personal computer or, for larger projects, on a dedicated server. Currently, the server runs on a local PC connected to the internet.
+
+Additionally, a running MongoDB server is required, where the database is stored. Both the application server and the database must have internet access to enable communication with each other and with the user.
+
+To use the software, the user only needs internet access and a web browser. The user must register or log in to access the site. The main functionality is to navigate to the form, fill it out, wait between 2 to 5 seconds, and receive an AI-generated drink recommendation. The user can then follow a provided link to order the drink or try to find another one.
