@@ -14,7 +14,7 @@ Figure 4.3 – Example of the main page
 From the main page shown in Figure 4.3, users can navigate to a page with a selection of alcoholic beverages sourced from a third-party website, and then proceed to purchase them. Additionally, users can fill out a form to receive a cocktail recipe or submit preferences and receive an AI-generated drink suggestion, with an option to order it.
 <img width="800" alt="Screenshot 2025-07-01 at 11 58 04" src="https://github.com/user-attachments/assets/15ed5037-aead-48bd-96f9-f27d59c0adc3" />
 
-Figure 4.4 – Example of the shop page
+Figure 4.4 – Example of the shop page in app
 The shop page shown in Figure 4.4 allows users to find drinks from a curated database, compiled using free drink databases. Users can also follow a provided link to order a selected beverage.
 <img width="757" alt="Screenshot 2025-07-01 at 11 58 12" src="https://github.com/user-attachments/assets/6045f229-821c-44fb-a47f-ad3c5d751d85" />
 
