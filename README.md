@@ -1,4 +1,4 @@
-This project implements a client-server architecture for a wine-selling website, using artificial intelligence to assist in wine selection. The selection is based on either an LLM (Large Language Model) or an arbiter algorithm to provide the best possible recommendation.
+This project implements a client-server architecture for a wine-selling website, using artificial intelligence to assist in wine selection. The selection is based on either an LLM (Large Language Model) or an arbiter algorithm to provide the best possible recommendation
 In the software, pages with the following graphical user interface were implemented, namely:
 <img width="794" alt="Screenshot 2025-07-01 at 11 57 39" src="https://github.com/user-attachments/assets/52329a65-7b0e-4cd0-a711-d1cc935e7408" />
 
