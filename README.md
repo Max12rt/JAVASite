@@ -1,4 +1,63 @@
-This project implements a client-server architecture for a wine-selling website, using artificial intelligence to assist in wine selection. The selection is based on either an LLM (Large Language Model) or an arbiter algorithm to provide the best possible recommendation
+# 🍷 WineFlow AI: Smart Client-Server Platform
+
+An intelligent client-server web application designed to simplify wine selection using **Artificial Intelligence**. The system provides personalized recommendations by leveraging either a **Large Language Model (LLM)** or a specialized **Arbiter Algorithm**.
+
+---
+
+## 🚀 Key Features
+
+* **Hybrid AI Logic:** Smart selection powered by LLMs and custom arbiter algorithms.
+* **Seamless Integration:** Real-time data fetching from third-party wine databases.
+* **Quick Results:** Get a personalized recommendation in **2–5 seconds**.
+* **Full Cycle:** From registration and preference setting to direct purchase links.
+
+---
+
+## 💻 Graphical User Interface (GUI)
+
+The following flow represents the core user experience within the application:
+
+### 1. Access & Security
+* **Authentication (Figure 4.1):** A secure login gateway with fields for credentials and a direct link to the signup page.
+* **Registration (Figure 4.2):** A streamlined onboarding process requiring name, email, and password confirmation.
+
+### 2. Exploration & Shopping
+* **Main Dashboard (Figure 4.3):** The central hub where users can choose between browsing the catalog, generating cocktail recipes, or starting the AI preference form.
+* **Curated Shop (Figure 4.4):** A digital catalog built from open-source drink databases, providing external links to complete purchases.
+
+### 3. AI Recommendation Engine
+* **Wine Preference Form (Figure 4.5):** A comprehensive tool where users input specific criteria (characteristics, restrictions, and additional text preferences).
+* **Personalized Results (Figure 4.6):** The final output displaying the recommended drink, a purchase link, and an option to restart the search.
+
+---
+
+## 🛠 Technical Stack & Requirements
+
+### Backend & Infrastructure
+* **Framework:** Spring (Java)
+* **Web Server:** Apache Tomcat
+* **Database:** MongoDB (NoSQL)
+* **Deployment:** Currently runs on a local PC with internet access (scalable to dedicated servers).
+
+### Requirements
+1.  **Internet Connection:** Required for both the application and database servers to communicate and access AI services.
+2.  **Environment:** * Running **Tomcat** server (via Spring).
+    * Active **MongoDB** instance.
+    * Any modern **Web Browser** for the client-side.
+
+---
+
+## ⚙️ How to Use
+
+1.  **Start Services:** Ensure your MongoDB and Tomcat servers are active.
+2.  **Authentication:** Register a new profile or log in with existing credentials.
+3.  **Submit Preferences:** Navigate to the AI Form and fill in your drink criteria.
+4.  **Get Recommendation:** Wait 2–5 seconds for the AI to process your request.
+5.  **Purchase:** Follow the generated link to a third-party website to buy your drink or try a new search.
+
+---
+
+*Developed as a project implementing modern Client-Server architecture and AI integration.*
 In the software, pages with the following graphical user interface were implemented, namely:
 <img width="794" alt="Screenshot 2025-07-01 at 11 57 39" src="https://github.com/user-attachments/assets/52329a65-7b0e-4cd0-a711-d1cc935e7408" />
 
